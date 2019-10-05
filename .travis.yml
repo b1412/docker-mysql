@@ -1,0 +1,11 @@
+dist: trusty
+services:
+- docker
+script:
+- docker build -t $IMAGE_NAME .
+- echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+- docker tag $IMAGE_NAME:latest $DOCKER_USERNAME/$IMAGE_NAME:$TRAVIS_BUILD_NUMBER
+- docker push $DOCKER_USERNAME/$IMAGE_NAME:$TRAVIS_BUILD_NUMBER
+env:
+  global:
+  - IMAGE_NAME=cannon-mysql
