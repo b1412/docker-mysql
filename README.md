@@ -3,11 +3,13 @@
 ## Run your query
 
 ```bash
- docker exec cannon-mysql mysql -uroot -pcannon -e 'SELECT * from cannon.branch' 
+ docker exec docker-mysql mysql -uroot -pcannon -e 'SELECT * from cannon.branch' 
+ docker exec docker-mysql mysql -uroot -pcannon -e 'SELECT * from cannon.branch' 
 ```
 or 
 ```bash
- docker exec -it cannon-mysql bash 
+ docker exec -it docker-mysql bash 
  mysql -uroot -pcannon
+ mysql -uroot -proot
 ```
 

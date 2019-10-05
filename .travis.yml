@@ -8,4 +8,4 @@ script:
 - docker push $DOCKER_USERNAME/$IMAGE_NAME:$TRAVIS_BUILD_NUMBER
 env:
   global:
-  - IMAGE_NAME=cannon-mysql
+  - IMAGE_NAME=docker-mysql
