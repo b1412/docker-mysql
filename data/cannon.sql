@@ -33,7 +33,6 @@ CREATE TABLE `branch` (
   `parent_id` bigint(20) DEFAULT NULL,
   `user_id` bigint(20) DEFAULT NULL,
   `active` char(1) DEFAULT NULL,
-  `number` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK1gxi5vl5ufs2l8swye7g26n16` (`creator_id`),
   KEY `FK4mavupar7e5wr8jeuda2d49up` (`modifier_id`),
@@ -59,7 +58,7 @@ CREATE TABLE `branch` (
 
 LOCK TABLES `branch` WRITE;
 /*!40000 ALTER TABLE `branch` DISABLE KEYS */;
-INSERT INTO `branch` VALUES (1,'2017-01-22 07:52:50.584','2017-06-13 10:26:15.812',1,'System',1,1,NULL,1,NULL,NULL);
+INSERT INTO `branch` VALUES (1,'2017-01-22 07:52:50.584','2019-12-12 04:27:10.958',4,'System',1,1,NULL,1,NULL);
 /*!40000 ALTER TABLE `branch` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +126,7 @@ CREATE TABLE `permission` (
 
 LOCK TABLES `permission` WRITE;
 /*!40000 ALTER TABLE `permission` DISABLE KEYS */;
-INSERT INTO `permission` VALUES (25,'2017-10-19 15:53:10.444','2017-10-19 15:53:10.444',0,'Index branch','/v[\\d]+/branch','Index branch','branch','GET',NULL,NULL,1,1,NULL),(26,'2017-10-19 15:53:10.446','2017-10-19 15:53:10.446',0,'Create branch','/v[\\d]+/branch','Create branch','branch','POST',NULL,NULL,1,1,NULL),(27,'2017-10-19 15:53:10.448','2017-10-19 15:53:10.448',0,'Read branch','/v[\\d]+/branch/[\\d]+','Read branch','branch','GET',NULL,NULL,1,1,NULL),(28,'2017-10-19 15:53:10.450','2017-10-19 15:53:10.450',0,'Update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PUT',NULL,NULL,1,1,NULL),(29,'2017-10-19 15:53:10.452','2017-10-19 15:53:10.452',0,'Update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PATCH',NULL,NULL,1,1,NULL),(30,'2017-10-19 15:53:10.454','2017-10-19 15:53:10.454',0,'Delete branch','/v[\\d]+/branch/[\\d]+','Delete branch','branch','DELETE',NULL,NULL,1,1,NULL),(103,'2017-10-19 15:53:10.640','2017-10-19 15:53:10.640',0,'Index permission','/v[\\d]+/permission','Index permission','permission','GET',NULL,NULL,1,1,NULL),(104,'2017-10-19 15:53:10.642','2017-10-19 15:53:10.642',0,'Create permission','/v[\\d]+/permission','Create permission','permission','POST',NULL,NULL,1,1,NULL),(105,'2017-10-19 15:53:10.644','2017-10-19 15:53:10.644',0,'Read permission','/v[\\d]+/permission/[\\d]+','Read permission','permission','GET',NULL,NULL,1,1,NULL),(106,'2017-10-19 15:53:10.645','2017-10-19 15:53:10.645',0,'Update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PUT',NULL,NULL,1,1,NULL),(107,'2017-10-19 15:53:10.647','2017-10-19 15:53:10.647',0,'Update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PATCH',NULL,NULL,1,1,NULL),(108,'2017-10-19 15:53:10.649','2017-10-19 15:53:10.649',0,'Delete permission','/v[\\d]+/permission/[\\d]+','Delete permission','permission','DELETE',NULL,NULL,1,1,NULL),(127,'2017-10-19 15:53:10.695','2017-10-19 15:53:10.695',0,'Index role','/v[\\d]+/role','Index role','role','GET',NULL,NULL,1,1,NULL),(128,'2017-10-19 15:53:10.698','2017-10-19 15:53:10.698',0,'Create role','/v[\\d]+/role','Create role','role','POST',NULL,NULL,1,1,NULL),(129,'2017-10-19 15:53:10.700','2017-10-19 15:53:10.700',0,'Read role','/v[\\d]+/role/[\\d]+','Read role','role','GET',NULL,NULL,1,1,NULL),(130,'2017-10-19 15:53:10.702','2017-10-19 15:53:10.702',0,'Update role','/v[\\d]+/role/[\\d]+','Update role','role','PUT',NULL,NULL,1,1,NULL),(131,'2017-10-19 15:53:10.703','2017-10-19 15:53:10.703',0,'Update role','/v[\\d]+/role/[\\d]+','Update role','role','PATCH',NULL,NULL,1,1,NULL),(132,'2017-10-19 15:53:10.705','2017-10-19 15:53:10.705',0,'Delete role','/v[\\d]+/role/[\\d]+','Delete role','role','DELETE',NULL,NULL,1,1,NULL),(133,'2017-10-19 15:53:10.710','2017-10-19 15:53:10.710',0,'Index role-permission','/v[\\d]+/role-permission','Index role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(134,'2017-10-19 15:53:10.712','2017-10-19 15:53:10.712',0,'Create role-permission','/v[\\d]+/role-permission','Create role-permission','role-permission','POST',NULL,NULL,1,1,NULL),(135,'2017-10-19 15:53:10.713','2017-10-19 15:53:10.713',0,'Read role-permission','/v[\\d]+/role-permission/[\\d]+','Read role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(136,'2017-10-19 15:53:10.714','2017-10-19 15:53:10.714',0,'Update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PUT',NULL,NULL,1,1,NULL),(137,'2017-10-19 15:53:10.716','2017-10-19 15:53:10.716',0,'Update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PATCH',NULL,NULL,1,1,NULL),(138,'2017-10-19 15:53:10.717','2017-10-19 15:53:10.717',0,'Delete role-permission','/v[\\d]+/role-permission/[\\d]+','Delete role-permission','role-permission','DELETE',NULL,NULL,1,1,NULL),(139,'2017-10-19 15:53:10.722','2017-10-19 15:53:10.722',0,'Index rule','/v[\\d]+/rule','Index rule','rule','GET',NULL,NULL,1,1,NULL),(140,'2017-10-19 15:53:10.724','2017-10-19 15:53:10.724',0,'Create rule','/v[\\d]+/rule','Create rule','rule','POST',NULL,NULL,1,1,NULL),(141,'2017-10-19 15:53:10.725','2017-10-19 15:53:10.725',0,'Read rule','/v[\\d]+/rule/[\\d]+','Read rule','rule','GET',NULL,NULL,1,1,NULL),(142,'2017-10-19 15:53:10.727','2017-10-19 15:53:10.727',0,'Update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PUT',NULL,NULL,1,1,NULL),(143,'2017-10-19 15:53:10.728','2017-10-19 15:53:10.728',0,'Update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PATCH',NULL,NULL,1,1,NULL),(144,'2017-10-19 15:53:10.730','2017-10-19 15:53:10.730',0,'Delete rule','/v[\\d]+/rule/[\\d]+','Delete rule','rule','DELETE',NULL,NULL,1,1,NULL),(163,'2017-10-19 15:53:10.775','2017-10-19 15:53:10.775',0,'Index user','/v[\\d]+/user','Index user','user','GET',NULL,NULL,1,1,NULL),(164,'2017-10-19 15:53:10.777','2017-10-19 15:53:10.777',0,'Create user','/v[\\d]+/user','Create user','user','POST',NULL,NULL,1,1,NULL),(165,'2017-10-19 15:53:10.779','2017-10-19 15:53:10.779',0,'Read user','/v[\\d]+/user/[\\d]+','Read user','user','GET',NULL,NULL,1,1,NULL),(166,'2017-10-19 15:53:10.780','2017-10-19 15:53:10.780',0,'Update user','/v[\\d]+/user/[\\d]+','Update user','user','PUT',NULL,NULL,1,1,NULL),(167,'2017-10-19 15:53:10.782','2017-10-19 15:53:10.782',0,'Update user','/v[\\d]+/user/[\\d]+','Update user','user','PATCH',NULL,NULL,1,1,NULL),(168,'2017-10-19 15:53:10.784','2017-10-19 15:53:10.784',0,'Delete user','/v[\\d]+/user/[\\d]+','Delete user','user','DELETE',NULL,NULL,1,1,NULL);
+INSERT INTO `permission` VALUES (25,'2017-10-19 15:53:10.444','2019-12-16 02:54:35.921',2,'Index branch','/v[\\d]+/branch','Index branch','branch','GET',NULL,NULL,1,1,NULL),(26,'2017-10-19 15:53:10.446','2017-10-19 15:53:10.446',0,'Create branch','/v[\\d]+/branch','Create branch','branch','POST',NULL,NULL,1,1,NULL),(27,'2017-10-19 15:53:10.448','2017-10-19 15:53:10.448',0,'Read branch','/v[\\d]+/branch/[\\d]+','Read branch','branch','GET',NULL,NULL,1,1,NULL),(28,'2017-10-19 15:53:10.450','2017-10-19 15:53:10.450',0,'Update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PUT',NULL,NULL,1,1,NULL),(29,'2017-10-19 15:53:10.452','2017-10-19 15:53:10.452',0,'Update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PATCH',NULL,NULL,1,1,NULL),(30,'2017-10-19 15:53:10.454','2017-10-19 15:53:10.454',0,'Delete branch','/v[\\d]+/branch/[\\d]+','Delete branch','branch','DELETE',NULL,NULL,1,1,NULL),(103,'2017-10-19 15:53:10.640','2017-10-19 15:53:10.640',0,'Index permission','/v[\\d]+/permission','Index permission','permission','GET',NULL,NULL,1,1,NULL),(104,'2017-10-19 15:53:10.642','2017-10-19 15:53:10.642',0,'Create permission','/v[\\d]+/permission','Create permission','permission','POST',NULL,NULL,1,1,NULL),(105,'2017-10-19 15:53:10.644','2017-10-19 15:53:10.644',0,'Read permission','/v[\\d]+/permission/[\\d]+','Read permission','permission','GET',NULL,NULL,1,1,NULL),(106,'2017-10-19 15:53:10.645','2017-10-19 15:53:10.645',0,'Update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PUT',NULL,NULL,1,1,NULL),(107,'2017-10-19 15:53:10.647','2017-10-19 15:53:10.647',0,'Update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PATCH',NULL,NULL,1,1,NULL),(108,'2017-10-19 15:53:10.649','2017-10-19 15:53:10.649',0,'Delete permission','/v[\\d]+/permission/[\\d]+','Delete permission','permission','DELETE',NULL,NULL,1,1,NULL),(109,'2019-11-20 20:28:38.497','2019-11-20 20:28:38.497',0,'Filter permission','/v[\\d]+/permission/filter','Filter permission','permission','GET',NULL,NULL,1,1,NULL),(127,'2017-10-19 15:53:10.695','2017-10-19 15:53:10.695',0,'Index role','/v[\\d]+/role','Index role','role','GET',NULL,NULL,1,1,NULL),(128,'2017-10-19 15:53:10.698','2017-10-19 15:53:10.698',0,'Create role','/v[\\d]+/role','Create role','role','POST',NULL,NULL,1,1,NULL),(129,'2017-10-19 15:53:10.700','2017-10-19 15:53:10.700',0,'Read role','/v[\\d]+/role/[\\d]+','Read role','role','GET',NULL,NULL,1,1,NULL),(130,'2017-10-19 15:53:10.702','2017-10-19 15:53:10.702',0,'Update role','/v[\\d]+/role/[\\d]+','Update role','role','PUT',NULL,NULL,1,1,NULL),(131,'2017-10-19 15:53:10.703','2017-10-19 15:53:10.703',0,'Update role','/v[\\d]+/role/[\\d]+','Update role','role','PATCH',NULL,NULL,1,1,NULL),(132,'2017-10-19 15:53:10.705','2017-10-19 15:53:10.705',0,'Delete role','/v[\\d]+/role/[\\d]+','Delete role','role','DELETE',NULL,NULL,1,1,NULL),(133,'2017-10-19 15:53:10.710','2017-10-19 15:53:10.710',0,'Index role-permission','/v[\\d]+/role-permission','Index role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(134,'2017-10-19 15:53:10.712','2017-10-19 15:53:10.712',0,'Create role-permission','/v[\\d]+/role-permission','Create role-permission','role-permission','POST',NULL,NULL,1,1,NULL),(135,'2017-10-19 15:53:10.713','2017-10-19 15:53:10.713',0,'Read role-permission','/v[\\d]+/role-permission/[\\d]+','Read role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(136,'2017-10-19 15:53:10.714','2017-10-19 15:53:10.714',0,'Update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PUT',NULL,NULL,1,1,NULL),(137,'2017-10-19 15:53:10.716','2017-10-19 15:53:10.716',0,'Update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PATCH',NULL,NULL,1,1,NULL),(138,'2017-10-19 15:53:10.717','2017-10-19 15:53:10.717',0,'Delete role-permission','/v[\\d]+/role-permission/[\\d]+','Delete role-permission','role-permission','DELETE',NULL,NULL,1,1,NULL),(139,'2017-10-19 15:53:10.722','2017-10-19 15:53:10.722',0,'Index rule','/v[\\d]+/rule','Index rule','rule','GET',NULL,NULL,1,1,NULL),(140,'2017-10-19 15:53:10.724','2017-10-19 15:53:10.724',0,'Create rule','/v[\\d]+/rule','Create rule','rule','POST',NULL,NULL,1,1,NULL),(141,'2017-10-19 15:53:10.725','2017-10-19 15:53:10.725',0,'Read rule','/v[\\d]+/rule/[\\d]+','Read rule','rule','GET',NULL,NULL,1,1,NULL),(142,'2017-10-19 15:53:10.727','2017-10-19 15:53:10.727',0,'Update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PUT',NULL,NULL,1,1,NULL),(143,'2017-10-19 15:53:10.728','2017-10-19 15:53:10.728',0,'Update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PATCH',NULL,NULL,1,1,NULL),(144,'2017-10-19 15:53:10.730','2017-10-19 15:53:10.730',0,'Delete rule','/v[\\d]+/rule/[\\d]+','Delete rule','rule','DELETE',NULL,NULL,1,1,NULL),(163,'2017-10-19 15:53:10.775','2017-10-19 15:53:10.775',0,'Index user','/v[\\d]+/user','Index user','user','GET',NULL,NULL,1,1,NULL),(164,'2017-10-19 15:53:10.777','2017-10-19 15:53:10.777',0,'Create user','/v[\\d]+/user','Create user','user','POST',NULL,NULL,1,1,NULL),(165,'2017-10-19 15:53:10.779','2017-10-19 15:53:10.779',0,'Read user','/v[\\d]+/user/[\\d]+','Read user','user','GET',NULL,NULL,1,1,NULL),(166,'2017-10-19 15:53:10.780','2017-10-19 15:53:10.780',0,'Update user','/v[\\d]+/user/[\\d]+','Update user','user','PUT',NULL,NULL,1,1,NULL),(167,'2017-10-19 15:53:10.782','2017-10-19 15:53:10.782',0,'Update user','/v[\\d]+/user/[\\d]+','Update user','user','PATCH',NULL,NULL,1,1,NULL),(168,'2017-10-19 15:53:10.784','2017-10-19 15:53:10.784',0,'Delete user','/v[\\d]+/user/[\\d]+','Delete user','user','DELETE',NULL,NULL,1,1,NULL);
 /*!40000 ALTER TABLE `permission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -168,7 +167,7 @@ CREATE TABLE `role` (
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (1,'2016-12-27 09:02:29.690','2018-07-07 06:46:02.646',1,'super admin',1,1,NULL);
+INSERT INTO `role` VALUES (1,'2016-12-27 09:02:29.690','2019-12-12 05:09:03.375',3,'super admin',1,1,NULL);
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -209,7 +208,7 @@ CREATE TABLE `role_permission` (
   CONSTRAINT `FKi8iiyuadjhp8w70ynins1rgue` FOREIGN KEY (`modifier_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FKnt1go1ape759epkyidqp2apw3` FOREIGN KEY (`modifier_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FKtofn3uptyl4qc34wa2cdd2e7g` FOREIGN KEY (`permission_id`) REFERENCES `permission` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39743 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39744 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -218,7 +217,7 @@ CREATE TABLE `role_permission` (
 
 LOCK TABLES `role_permission` WRITE;
 /*!40000 ALTER TABLE `role_permission` DISABLE KEYS */;
-INSERT INTO `role_permission` VALUES (39683,'2018-07-07 06:46:02.545','2018-07-07 06:46:02.545',0,1,1,25,1,NULL),(39684,'2018-07-07 06:46:02.546','2018-07-07 06:46:02.546',0,1,1,26,1,NULL),(39685,'2018-07-07 06:46:02.547','2018-07-07 06:46:02.547',0,1,1,27,1,NULL),(39686,'2018-07-07 06:46:02.549','2018-07-07 06:46:02.549',0,1,1,28,1,NULL),(39687,'2018-07-07 06:46:02.550','2018-07-07 06:46:02.550',0,1,1,29,1,NULL),(39688,'2018-07-07 06:46:02.551','2018-07-07 06:46:02.551',0,1,1,30,1,NULL),(39707,'2018-07-07 06:46:02.575','2018-07-07 06:46:02.575',0,1,1,103,1,NULL),(39708,'2018-07-07 06:46:02.576','2018-07-07 06:46:02.576',0,1,1,104,1,NULL),(39709,'2018-07-07 06:46:02.578','2018-07-07 06:46:02.578',0,1,1,105,1,NULL),(39710,'2018-07-07 06:46:02.579','2018-07-07 06:46:02.579',0,1,1,106,1,NULL),(39711,'2018-07-07 06:46:02.580','2018-07-07 06:46:02.580',0,1,1,107,1,NULL),(39712,'2018-07-07 06:46:02.582','2018-07-07 06:46:02.582',0,1,1,108,1,NULL),(39713,'2018-07-07 06:46:02.583','2018-07-07 06:46:02.583',0,1,1,127,1,NULL),(39714,'2018-07-07 06:46:02.584','2018-07-07 06:46:02.584',0,1,1,128,1,NULL),(39715,'2018-07-07 06:46:02.586','2018-07-07 06:46:02.586',0,1,1,129,1,NULL),(39716,'2018-07-07 06:46:02.587','2018-07-07 06:46:02.587',0,1,1,130,1,NULL),(39717,'2018-07-07 06:46:02.588','2018-07-07 06:46:02.588',0,1,1,131,1,NULL),(39718,'2018-07-07 06:46:02.589','2018-07-07 06:46:02.589',0,1,1,132,1,NULL),(39719,'2018-07-07 06:46:02.590','2018-07-07 06:46:02.590',0,1,1,133,1,NULL),(39720,'2018-07-07 06:46:02.591','2018-07-07 06:46:02.591',0,1,1,134,1,NULL),(39721,'2018-07-07 06:46:02.592','2018-07-07 06:46:02.592',0,1,1,135,1,NULL),(39722,'2018-07-07 06:46:02.592','2018-07-07 06:46:02.592',0,1,1,136,1,NULL),(39723,'2018-07-07 06:46:02.593','2018-07-07 06:46:02.593',0,1,1,137,1,NULL),(39724,'2018-07-07 06:46:02.594','2018-07-07 06:46:02.594',0,1,1,138,1,NULL),(39725,'2018-07-07 06:46:02.596','2018-07-07 06:46:02.596',0,1,1,139,1,NULL),(39726,'2018-07-07 06:46:02.597','2018-07-07 06:46:02.597',0,1,1,140,1,NULL),(39727,'2018-07-07 06:46:02.598','2018-07-07 06:46:02.598',0,1,1,141,1,NULL),(39728,'2018-07-07 06:46:02.599','2018-07-07 06:46:02.599',0,1,1,142,1,NULL),(39729,'2018-07-07 06:46:02.600','2018-07-07 06:46:02.600',0,1,1,143,1,NULL),(39730,'2018-07-07 06:46:02.601','2018-07-07 06:46:02.601',0,1,1,144,1,NULL),(39737,'2018-07-07 06:46:02.609','2018-07-07 06:46:02.609',0,1,1,163,1,NULL),(39738,'2018-07-07 06:46:02.610','2018-07-07 06:46:02.610',0,1,1,164,1,NULL),(39739,'2018-07-07 06:46:02.611','2018-07-07 06:46:02.611',0,1,1,165,1,NULL),(39740,'2018-07-07 06:46:02.612','2018-07-07 06:46:02.612',0,1,1,166,1,NULL),(39741,'2018-07-07 06:46:02.614','2018-07-07 06:46:02.614',0,1,1,167,1,NULL),(39742,'2018-07-07 06:46:02.614','2018-07-07 06:46:02.614',0,1,1,168,1,NULL);
+INSERT INTO `role_permission` VALUES (39683,'2018-07-07 06:46:02.545','2018-07-07 06:46:02.545',0,1,1,25,1,NULL),(39684,'2018-07-07 06:46:02.546','2018-07-07 06:46:02.546',0,1,1,26,1,NULL),(39685,'2018-07-07 06:46:02.547','2018-07-07 06:46:02.547',0,1,1,27,1,NULL),(39686,'2018-07-07 06:46:02.549','2018-07-07 06:46:02.549',0,1,1,28,1,NULL),(39687,'2018-07-07 06:46:02.550','2018-07-07 06:46:02.550',0,1,1,29,1,NULL),(39688,'2018-07-07 06:46:02.551','2018-07-07 06:46:02.551',0,1,1,30,1,NULL),(39707,'2018-07-07 06:46:02.575','2018-07-07 06:46:02.575',0,1,1,103,1,NULL),(39708,'2018-07-07 06:46:02.576','2018-07-07 06:46:02.576',0,1,1,104,1,NULL),(39709,'2018-07-07 06:46:02.578','2018-07-07 06:46:02.578',0,1,1,105,1,NULL),(39710,'2018-07-07 06:46:02.579','2018-07-07 06:46:02.579',0,1,1,106,1,NULL),(39711,'2018-07-07 06:46:02.580','2018-07-07 06:46:02.580',0,1,1,107,1,NULL),(39712,'2018-07-07 06:46:02.582','2018-07-07 06:46:02.582',0,1,1,108,1,NULL),(39713,'2018-07-07 06:46:02.583','2018-07-07 06:46:02.583',0,1,1,127,1,NULL),(39714,'2018-07-07 06:46:02.584','2018-07-07 06:46:02.584',0,1,1,128,1,NULL),(39715,'2018-07-07 06:46:02.586','2018-07-07 06:46:02.586',0,1,1,129,1,NULL),(39716,'2018-07-07 06:46:02.587','2018-07-07 06:46:02.587',0,1,1,130,1,NULL),(39717,'2018-07-07 06:46:02.588','2018-07-07 06:46:02.588',0,1,1,131,1,NULL),(39718,'2018-07-07 06:46:02.589','2018-07-07 06:46:02.589',0,1,1,132,1,NULL),(39719,'2018-07-07 06:46:02.590','2018-07-07 06:46:02.590',0,1,1,133,1,NULL),(39720,'2018-07-07 06:46:02.591','2018-07-07 06:46:02.591',0,1,1,134,1,NULL),(39721,'2018-07-07 06:46:02.592','2018-07-07 06:46:02.592',0,1,1,135,1,NULL),(39722,'2018-07-07 06:46:02.592','2018-07-07 06:46:02.592',0,1,1,136,1,NULL),(39723,'2018-07-07 06:46:02.593','2018-07-07 06:46:02.593',0,1,1,137,1,NULL),(39724,'2018-07-07 06:46:02.594','2018-07-07 06:46:02.594',0,1,1,138,1,NULL),(39725,'2018-07-07 06:46:02.596','2018-07-07 06:46:02.596',0,1,1,139,1,NULL),(39726,'2018-07-07 06:46:02.597','2018-07-07 06:46:02.597',0,1,1,140,1,NULL),(39727,'2018-07-07 06:46:02.598','2018-07-07 06:46:02.598',0,1,1,141,1,NULL),(39728,'2018-07-07 06:46:02.599','2018-07-07 06:46:02.599',0,1,1,142,1,NULL),(39729,'2018-07-07 06:46:02.600','2018-07-07 06:46:02.600',0,1,1,143,1,NULL),(39730,'2018-07-07 06:46:02.601','2018-07-07 06:46:02.601',0,1,1,144,1,NULL),(39737,'2018-07-07 06:46:02.609','2018-07-07 06:46:02.609',0,1,1,163,1,NULL),(39738,'2018-07-07 06:46:02.610','2018-07-07 06:46:02.610',0,1,1,164,1,NULL),(39739,'2018-07-07 06:46:02.611','2018-07-07 06:46:02.611',0,1,1,165,1,NULL),(39740,'2018-07-07 06:46:02.612','2018-07-07 06:46:02.612',0,1,1,166,1,NULL),(39741,'2018-07-07 06:46:02.614','2018-07-07 06:46:02.614',0,1,1,167,1,NULL),(39742,'2018-07-07 06:46:02.614','2018-07-07 06:46:02.614',0,1,1,168,1,NULL),(39743,'2018-07-07 06:46:02.582','2018-07-07 06:46:02.582',0,1,1,109,1,NULL);
 /*!40000 ALTER TABLE `role_permission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,7 +248,7 @@ CREATE TABLE `role_permission_rule` (
 
 LOCK TABLES `role_permission_rule` WRITE;
 /*!40000 ALTER TABLE `role_permission_rule` DISABLE KEYS */;
-INSERT INTO `role_permission_rule` VALUES (39683,1);
+INSERT INTO `role_permission_rule` VALUES (39683,1),(39743,1),(39737,1),(39738,1),(39739,1),(39740,1),(39741,1),(39742,1),(39684,1),(39685,1),(39686,1),(39687,1),(39688,1),(39711,1),(39712,1),(39713,1),(39714,1),(39715,1),(39716,1),(39717,1),(39725,1),(39726,1),(39727,1),(39728,1),(39729,1),(39730,1),(39710,1),(39709,1),(39708,1),(39707,1);
 /*!40000 ALTER TABLE `role_permission_rule` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -266,11 +265,8 @@ CREATE TABLE `rule` (
   `updated_at` datetime(3) DEFAULT CURRENT_TIMESTAMP(3),
   `version` bigint(20) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `params` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
   `creator_id` bigint(20) DEFAULT NULL,
   `modifier_id` bigint(20) DEFAULT NULL,
-  `enable` char(1) NOT NULL,
   `user_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKt563w3p6atvxp82y7mvd6usa1` (`creator_id`),
@@ -293,7 +289,7 @@ CREATE TABLE `rule` (
 
 LOCK TABLES `rule` WRITE;
 /*!40000 ALTER TABLE `rule` DISABLE KEYS */;
-INSERT INTO `rule` VALUES (1,'2017-05-20 10:41:58.743','2017-05-27 11:57:02.528',1,'all',NULL,'scope',NULL,NULL,'Y',NULL),(2,'2017-05-20 10:41:58.743','2017-05-27 11:57:02.528',1,'user',NULL,'scope',NULL,NULL,'Y',NULL),(3,'2017-05-20 10:41:58.743','2017-05-27 11:57:02.528',1,'creator',NULL,'scope',NULL,NULL,'Y',NULL);
+INSERT INTO `rule` VALUES (1,'2017-05-20 10:41:58.743','2019-12-12 05:05:32.453',3,'all',1,1,NULL),(2,'2017-05-20 10:41:58.743','2017-05-27 11:57:02.528',1,'user',1,1,NULL),(3,'2017-05-20 10:41:58.743','2017-05-27 11:57:02.528',1,'creator',1,1,NULL);
 /*!40000 ALTER TABLE `rule` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -311,22 +307,16 @@ CREATE TABLE `user` (
   `version` bigint(20) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `user_type` varchar(255) NOT NULL,
   `creator_id` bigint(20) DEFAULT NULL,
   `modifier_id` bigint(20) DEFAULT NULL,
   `branch_id` bigint(20) DEFAULT NULL,
   `role_id` bigint(20) DEFAULT NULL,
-  `name` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `verify` char(1) DEFAULT NULL,
   `introducer_id` bigint(20) DEFAULT NULL,
   `expires_in` bigint(20) DEFAULT NULL,
-  `ip_black_list` varchar(255) DEFAULT NULL,
-  `ip_white_list` varchar(255) DEFAULT NULL,
-  `anonymous_access_domain` varchar(255) DEFAULT NULL,
   `user_id` bigint(20) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
-  `coin` bigint(20) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `client_id` varchar(255) DEFAULT NULL,
   `active` char(1) DEFAULT NULL,
@@ -361,7 +351,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'2017-07-23 10:07:59.980','2018-08-23 10:33:08.776',2,'leon.zhou@intelliware.co.nz','$2a$10$tLYZWACu0IEOjDKpNa77SeRYX2au4dDa6CEOfXfJSoBE/4rcvcApO','BACKEND',1,1,1,1,'leonzhou','leon.zhou@intelliware.co.nz','Y',NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,NULL,'4',NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'2017-07-23 10:07:59.980','2019-12-12 05:06:50.919',6,'email of user22e44','password',1,1,1,1,'leon.zhou@intelliware.co.nz','Y',NULL,NULL,NULL,'address of user',NULL,'4',NULL,'login of user','notes of user');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -374,4 +364,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-20 23:05:35
+-- Dump completed on 2019-12-16 17:22:09
