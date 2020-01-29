@@ -2,7 +2,7 @@
 --
 -- Host: 127.0.0.1    Database: cannon
 -- ------------------------------------------------------
--- Server version	5.7.27
+-- Server version	5.7.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -49,7 +49,7 @@ CREATE TABLE `branch` (
   CONSTRAINT `FKqi6b3wpl77vybu6nwkh4jylib` FOREIGN KEY (`parent_id`) REFERENCES `branch` (`id`),
   CONSTRAINT `FKqwirx2dq1jsj1f8ux83jyf4km` FOREIGN KEY (`modifier_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FKry6s93789c89i5y36o42yh1c1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `branch` (
 
 LOCK TABLES `branch` WRITE;
 /*!40000 ALTER TABLE `branch` DISABLE KEYS */;
-INSERT INTO `branch` VALUES (1,'2017-01-22 07:52:50.584','2019-12-12 04:27:10.958',4,'System',1,1,NULL,1,NULL);
+INSERT INTO `branch` VALUES (1,'2017-01-22 07:52:50.584','2019-12-12 04:27:10.958',4,'System',1,1,NULL,1,NULL),(8,'2020-01-08 20:17:24.144','2020-01-08 20:17:24.144',0,'branch2',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `branch` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +117,7 @@ CREATE TABLE `permission` (
   KEY `FKh9eedsmuc7u7f3wm3betx9822` (`creator_id`),
   KEY `FKcq45bqtlseybf27r7bdgo0k85` (`modifier_id`),
   KEY `FKndhq1fslrx1ll0iqu99lchih6` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=173 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +126,7 @@ CREATE TABLE `permission` (
 
 LOCK TABLES `permission` WRITE;
 /*!40000 ALTER TABLE `permission` DISABLE KEYS */;
-INSERT INTO `permission` VALUES (25,'2017-10-19 15:53:10.444','2019-12-16 02:54:35.921',2,'Index branch','/v[\\d]+/branch','Index branch','branch','GET',NULL,NULL,1,1,NULL),(26,'2017-10-19 15:53:10.446','2017-10-19 15:53:10.446',0,'Create branch','/v[\\d]+/branch','Create branch','branch','POST',NULL,NULL,1,1,NULL),(27,'2017-10-19 15:53:10.448','2017-10-19 15:53:10.448',0,'Read branch','/v[\\d]+/branch/[\\d]+','Read branch','branch','GET',NULL,NULL,1,1,NULL),(28,'2017-10-19 15:53:10.450','2017-10-19 15:53:10.450',0,'Update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PUT',NULL,NULL,1,1,NULL),(29,'2017-10-19 15:53:10.452','2017-10-19 15:53:10.452',0,'Update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PATCH',NULL,NULL,1,1,NULL),(30,'2017-10-19 15:53:10.454','2017-10-19 15:53:10.454',0,'Delete branch','/v[\\d]+/branch/[\\d]+','Delete branch','branch','DELETE',NULL,NULL,1,1,NULL),(103,'2017-10-19 15:53:10.640','2017-10-19 15:53:10.640',0,'Index permission','/v[\\d]+/permission','Index permission','permission','GET',NULL,NULL,1,1,NULL),(104,'2017-10-19 15:53:10.642','2017-10-19 15:53:10.642',0,'Create permission','/v[\\d]+/permission','Create permission','permission','POST',NULL,NULL,1,1,NULL),(105,'2017-10-19 15:53:10.644','2017-10-19 15:53:10.644',0,'Read permission','/v[\\d]+/permission/[\\d]+','Read permission','permission','GET',NULL,NULL,1,1,NULL),(106,'2017-10-19 15:53:10.645','2017-10-19 15:53:10.645',0,'Update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PUT',NULL,NULL,1,1,NULL),(107,'2017-10-19 15:53:10.647','2017-10-19 15:53:10.647',0,'Update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PATCH',NULL,NULL,1,1,NULL),(108,'2017-10-19 15:53:10.649','2017-10-19 15:53:10.649',0,'Delete permission','/v[\\d]+/permission/[\\d]+','Delete permission','permission','DELETE',NULL,NULL,1,1,NULL),(109,'2019-11-20 20:28:38.497','2019-11-20 20:28:38.497',0,'Filter permission','/v[\\d]+/permission/filter','Filter permission','permission','GET',NULL,NULL,1,1,NULL),(127,'2017-10-19 15:53:10.695','2017-10-19 15:53:10.695',0,'Index role','/v[\\d]+/role','Index role','role','GET',NULL,NULL,1,1,NULL),(128,'2017-10-19 15:53:10.698','2017-10-19 15:53:10.698',0,'Create role','/v[\\d]+/role','Create role','role','POST',NULL,NULL,1,1,NULL),(129,'2017-10-19 15:53:10.700','2017-10-19 15:53:10.700',0,'Read role','/v[\\d]+/role/[\\d]+','Read role','role','GET',NULL,NULL,1,1,NULL),(130,'2017-10-19 15:53:10.702','2017-10-19 15:53:10.702',0,'Update role','/v[\\d]+/role/[\\d]+','Update role','role','PUT',NULL,NULL,1,1,NULL),(131,'2017-10-19 15:53:10.703','2017-10-19 15:53:10.703',0,'Update role','/v[\\d]+/role/[\\d]+','Update role','role','PATCH',NULL,NULL,1,1,NULL),(132,'2017-10-19 15:53:10.705','2017-10-19 15:53:10.705',0,'Delete role','/v[\\d]+/role/[\\d]+','Delete role','role','DELETE',NULL,NULL,1,1,NULL),(133,'2017-10-19 15:53:10.710','2017-10-19 15:53:10.710',0,'Index role-permission','/v[\\d]+/role-permission','Index role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(134,'2017-10-19 15:53:10.712','2017-10-19 15:53:10.712',0,'Create role-permission','/v[\\d]+/role-permission','Create role-permission','role-permission','POST',NULL,NULL,1,1,NULL),(135,'2017-10-19 15:53:10.713','2017-10-19 15:53:10.713',0,'Read role-permission','/v[\\d]+/role-permission/[\\d]+','Read role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(136,'2017-10-19 15:53:10.714','2017-10-19 15:53:10.714',0,'Update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PUT',NULL,NULL,1,1,NULL),(137,'2017-10-19 15:53:10.716','2017-10-19 15:53:10.716',0,'Update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PATCH',NULL,NULL,1,1,NULL),(138,'2017-10-19 15:53:10.717','2017-10-19 15:53:10.717',0,'Delete role-permission','/v[\\d]+/role-permission/[\\d]+','Delete role-permission','role-permission','DELETE',NULL,NULL,1,1,NULL),(139,'2017-10-19 15:53:10.722','2017-10-19 15:53:10.722',0,'Index rule','/v[\\d]+/rule','Index rule','rule','GET',NULL,NULL,1,1,NULL),(140,'2017-10-19 15:53:10.724','2017-10-19 15:53:10.724',0,'Create rule','/v[\\d]+/rule','Create rule','rule','POST',NULL,NULL,1,1,NULL),(141,'2017-10-19 15:53:10.725','2017-10-19 15:53:10.725',0,'Read rule','/v[\\d]+/rule/[\\d]+','Read rule','rule','GET',NULL,NULL,1,1,NULL),(142,'2017-10-19 15:53:10.727','2017-10-19 15:53:10.727',0,'Update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PUT',NULL,NULL,1,1,NULL),(143,'2017-10-19 15:53:10.728','2017-10-19 15:53:10.728',0,'Update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PATCH',NULL,NULL,1,1,NULL),(144,'2017-10-19 15:53:10.730','2017-10-19 15:53:10.730',0,'Delete rule','/v[\\d]+/rule/[\\d]+','Delete rule','rule','DELETE',NULL,NULL,1,1,NULL),(163,'2017-10-19 15:53:10.775','2017-10-19 15:53:10.775',0,'Index user','/v[\\d]+/user','Index user','user','GET',NULL,NULL,1,1,NULL),(164,'2017-10-19 15:53:10.777','2017-10-19 15:53:10.777',0,'Create user','/v[\\d]+/user','Create user','user','POST',NULL,NULL,1,1,NULL),(165,'2017-10-19 15:53:10.779','2017-10-19 15:53:10.779',0,'Read user','/v[\\d]+/user/[\\d]+','Read user','user','GET',NULL,NULL,1,1,NULL),(166,'2017-10-19 15:53:10.780','2017-10-19 15:53:10.780',0,'Update user','/v[\\d]+/user/[\\d]+','Update user','user','PUT',NULL,NULL,1,1,NULL),(167,'2017-10-19 15:53:10.782','2017-10-19 15:53:10.782',0,'Update user','/v[\\d]+/user/[\\d]+','Update user','user','PATCH',NULL,NULL,1,1,NULL),(168,'2017-10-19 15:53:10.784','2017-10-19 15:53:10.784',0,'Delete user','/v[\\d]+/user/[\\d]+','Delete user','user','DELETE',NULL,NULL,1,1,NULL);
+INSERT INTO `permission` VALUES (25,'2017-10-19 15:53:10.444','2019-12-16 02:54:35.921',2,'index branch','/v[\\d]+/branch','Index branch','branch','GET',NULL,NULL,1,1,NULL),(26,'2017-10-19 15:53:10.446','2017-10-19 15:53:10.446',0,'create branch','/v[\\d]+/branch','Create branch','branch','POST',NULL,NULL,1,1,NULL),(27,'2017-10-19 15:53:10.448','2017-10-19 15:53:10.448',0,'read branch','/v[\\d]+/branch/[\\d]+','Read branch','branch','GET',NULL,NULL,1,1,NULL),(28,'2017-10-19 15:53:10.450','2017-10-19 15:53:10.450',0,'update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PUT',NULL,NULL,1,1,NULL),(29,'2017-10-19 15:53:10.452','2017-10-19 15:53:10.452',0,'update branch','/v[\\d]+/branch/[\\d]+','Update branch','branch','PATCH',NULL,NULL,1,1,NULL),(30,'2017-10-19 15:53:10.454','2017-10-19 15:53:10.454',0,'delete branch','/v[\\d]+/branch/[\\d]+','Delete branch','branch','DELETE',NULL,NULL,1,1,NULL),(103,'2017-10-19 15:53:10.640','2017-10-19 15:53:10.640',0,'index permission','/v[\\d]+/permission','Index permission','permission','GET',NULL,NULL,1,1,NULL),(104,'2017-10-19 15:53:10.642','2017-10-19 15:53:10.642',0,'create permission','/v[\\d]+/permission','Create permission','permission','POST',NULL,NULL,1,1,NULL),(105,'2017-10-19 15:53:10.644','2017-10-19 15:53:10.644',0,'read permission','/v[\\d]+/permission/[\\d]+','Read permission','permission','GET',NULL,NULL,1,1,NULL),(106,'2017-10-19 15:53:10.645','2017-10-19 15:53:10.645',0,'update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PUT',NULL,NULL,1,1,NULL),(107,'2017-10-19 15:53:10.647','2017-10-19 15:53:10.647',0,'update permission','/v[\\d]+/permission/[\\d]+','Update permission','permission','PATCH',NULL,NULL,1,1,NULL),(108,'2017-10-19 15:53:10.649','2017-10-19 15:53:10.649',0,'delete permission','/v[\\d]+/permission/[\\d]+','Delete permission','permission','DELETE',NULL,NULL,1,1,NULL),(109,'2019-11-20 20:28:38.497','2019-11-20 20:28:38.497',0,'filter permission','/v[\\d]+/permission/filter','Filter permission','permission','GET',NULL,NULL,1,1,NULL),(127,'2017-10-19 15:53:10.695','2017-10-19 15:53:10.695',0,'index role','/v[\\d]+/role','Index role','role','GET',NULL,NULL,1,1,NULL),(128,'2017-10-19 15:53:10.698','2017-10-19 15:53:10.698',0,'create role','/v[\\d]+/role','Create role','role','POST',NULL,NULL,1,1,NULL),(129,'2017-10-19 15:53:10.700','2017-10-19 15:53:10.700',0,'read role','/v[\\d]+/role/[\\d]+','Read role','role','GET',NULL,NULL,1,1,NULL),(130,'2017-10-19 15:53:10.702','2017-10-19 15:53:10.702',0,'update role','/v[\\d]+/role/[\\d]+','Update role','role','PUT',NULL,NULL,1,1,NULL),(131,'2017-10-19 15:53:10.703','2017-10-19 15:53:10.703',0,'update role','/v[\\d]+/role/[\\d]+','Update role','role','PATCH',NULL,NULL,1,1,NULL),(132,'2017-10-19 15:53:10.705','2017-10-19 15:53:10.705',0,'delete role','/v[\\d]+/role/[\\d]+','Delete role','role','DELETE',NULL,NULL,1,1,NULL),(133,'2017-10-19 15:53:10.710','2017-10-19 15:53:10.710',0,'index role-permission','/v[\\d]+/role-permission','Index role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(134,'2017-10-19 15:53:10.712','2017-10-19 15:53:10.712',0,'create role-permission','/v[\\d]+/role-permission','Create role-permission','role-permission','POST',NULL,NULL,1,1,NULL),(135,'2017-10-19 15:53:10.713','2017-10-19 15:53:10.713',0,'read role-permission','/v[\\d]+/role-permission/[\\d]+','Read role-permission','role-permission','GET',NULL,NULL,1,1,NULL),(136,'2017-10-19 15:53:10.714','2017-10-19 15:53:10.714',0,'update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PUT',NULL,NULL,1,1,NULL),(137,'2017-10-19 15:53:10.716','2017-10-19 15:53:10.716',0,'update role-permission','/v[\\d]+/role-permission/[\\d]+','Update role-permission','role-permission','PATCH',NULL,NULL,1,1,NULL),(138,'2017-10-19 15:53:10.717','2017-10-19 15:53:10.717',0,'delete role-permission','/v[\\d]+/role-permission/[\\d]+','Delete role-permission','role-permission','DELETE',NULL,NULL,1,1,NULL),(139,'2017-10-19 15:53:10.722','2017-10-19 15:53:10.722',0,'index rule','/v[\\d]+/rule','Index rule','rule','GET',NULL,NULL,1,1,NULL),(140,'2017-10-19 15:53:10.724','2017-10-19 15:53:10.724',0,'create rule','/v[\\d]+/rule','Create rule','rule','POST',NULL,NULL,1,1,NULL),(141,'2017-10-19 15:53:10.725','2017-10-19 15:53:10.725',0,'read rule','/v[\\d]+/rule/[\\d]+','Read rule','rule','GET',NULL,NULL,1,1,NULL),(142,'2017-10-19 15:53:10.727','2017-10-19 15:53:10.727',0,'update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PUT',NULL,NULL,1,1,NULL),(143,'2017-10-19 15:53:10.728','2017-10-19 15:53:10.728',0,'update rule','/v[\\d]+/rule/[\\d]+','Update rule','rule','PATCH',NULL,NULL,1,1,NULL),(144,'2017-10-19 15:53:10.730','2017-10-19 15:53:10.730',0,'delete rule','/v[\\d]+/rule/[\\d]+','Delete rule','rule','DELETE',NULL,NULL,1,1,NULL),(163,'2017-10-19 15:53:10.775','2017-10-19 15:53:10.775',0,'index user','/v[\\d]+/user','Index user','user','GET',NULL,NULL,1,1,NULL),(164,'2017-10-19 15:53:10.777','2017-10-19 15:53:10.777',0,'create user','/v[\\d]+/user','Create user','user','POST',NULL,NULL,1,1,NULL),(165,'2017-10-19 15:53:10.779','2017-10-19 15:53:10.779',0,'read user','/v[\\d]+/user/[\\d]+','Read user','user','GET',NULL,NULL,1,1,NULL),(166,'2017-10-19 15:53:10.780','2017-10-19 15:53:10.780',0,'update user','/v[\\d]+/user/[\\d]+','Update user','user','PUT',NULL,NULL,1,1,NULL),(167,'2017-10-19 15:53:10.782','2017-10-19 15:53:10.782',0,'update user','/v[\\d]+/user/[\\d]+','Update user','user','PATCH',NULL,NULL,1,1,NULL),(168,'2017-10-19 15:53:10.784','2017-10-19 15:53:10.784',0,'delete user','/v[\\d]+/user/[\\d]+','Delete user','user','DELETE',NULL,NULL,1,1,NULL),(169,'2020-01-12 00:25:06.503','2020-01-12 00:25:06.503',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(170,'2020-01-12 00:25:56.507','2020-01-12 00:25:56.507',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(171,'2020-01-12 00:28:36.015','2020-01-12 00:28:36.015',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(172,'2020-01-12 00:36:26.268','2020-01-12 00:36:26.268',0,'3',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `permission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,7 +158,7 @@ CREATE TABLE `role` (
   CONSTRAINT `FKgiycbu32u3ohnrmlp1xpl7bh4` FOREIGN KEY (`creator_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FKicv3aucuajbj03ecxq3u43qrr` FOREIGN KEY (`creator_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FKoowdh5engkxou7i5796ivmkrg` FOREIGN KEY (`modifier_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -167,7 +167,7 @@ CREATE TABLE `role` (
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (1,'2016-12-27 09:02:29.690','2019-12-12 05:09:03.375',3,'super admin',1,1,NULL);
+INSERT INTO `role` VALUES (1,'2016-12-27 09:02:29.690','2019-12-20 06:38:26.751',4,'admin',1,1,NULL),(3,'2020-01-08 03:39:19.620','2020-01-08 03:39:19.620',0,'test',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -342,7 +342,7 @@ CREATE TABLE `user` (
   CONSTRAINT `FKr9fl57c476tlm3hr7rf8xik3j` FOREIGN KEY (`branch_id`) REFERENCES `branch` (`id`),
   CONSTRAINT `FKsi9lb5yo3m7vs9b9a6w5076jb` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FKswx9k4jwgun320m8jdey70iga` FOREIGN KEY (`modifier_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -351,7 +351,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'2017-07-23 10:07:59.980','2019-12-12 05:06:50.919',6,'email of user22e44','password',1,1,1,1,'leon.zhou@intelliware.co.nz','Y',NULL,NULL,NULL,'address of user',NULL,'4',NULL,'login of user','notes of user');
+INSERT INTO `user` VALUES (1,'2017-07-23 10:07:59.980','2019-12-12 05:06:50.919',6,'email of user22e44','$2a$10$tLYZWACu0IEOjDKpNa77SeRYX2au4dDa6CEOfXfJSoBE/4rcvcApO',1,1,1,1,'admin','Y',NULL,NULL,NULL,'address of user',NULL,'4',NULL,'login of user','notes of user'),(28,'2020-01-12 01:54:32.706','2020-01-13 04:11:57.180',1,'2233','$2a$10$klEj55HvCo6p9kl3SyVqVOozrZcwlJWQKiVYbVdr4puYA7yLg5eiK',NULL,NULL,8,1,'2233',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -364,4 +364,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-16 17:22:09
+-- Dump completed on 2020-01-29 18:03:03
